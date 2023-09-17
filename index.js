@@ -8,6 +8,11 @@ for(let i = 0; i < buttonLength; i++) {
     });
 }
 
+document.addEventListener("keypress", function(btn) {
+    playSound(btn.key);  
+    activeButton(btn.key);
+});
+
 function playSound(btn) {
     switch(btn) {
         case 'w':
@@ -26,6 +31,18 @@ function playSound(btn) {
             var d = new Audio("sounds/tom-4.mp3");
             d.play();
             break;
+        case 'j':
+            var j = new Audio("sounds/snare.mp3")
+            j.play();
+            break;
+        case 'k':
+            var k = new Audio("sounds/crash.mp3")
+            k.play();
+            break
+        case 'l':
+            var l = new Audio("sounds/kick-bass.mp3")
+            l.play();
+            break
     }
 }
 
